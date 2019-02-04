@@ -18,6 +18,8 @@ io.on('connection', (socket) => {
     socket.on('createMessage', (message) => {
         console.log('createMessage', message);
     });
+
+    socket.emit('newMessage', { from: 'Server', text: 'Hi!', createdAt: 123123 });
 });
 
 
